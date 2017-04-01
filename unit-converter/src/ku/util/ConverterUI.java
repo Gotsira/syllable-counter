@@ -151,10 +151,4 @@ public class ConverterUI extends JFrame {
 	void run() {
 		this.setVisible(true);
 	}
-
-//	public static void main(String[] args) {
-//		UnitConverter c = new UnitConverter();
-//		ConverterUI ui = new ConverterUI(c);
-//		ui.run();
-//	}
 }
