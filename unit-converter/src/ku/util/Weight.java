@@ -2,24 +2,24 @@ package ku.util;
 
 public enum Weight implements Unit {
 	/**
-	 * Ton unit.
+	 * Tonne unit.
 	 */
-	Ton("tonne", 1E6),
+	TONNE("Tonne", 1E6),
 	
 	/*
 	 * Milligram unit.
 	 */
-	Milligram("milligram", 1E-3),
+	MILLIGRAM("Milligram", 1E-3),
 	
 	/**
 	 * Gram unit.
 	 */
-	Gram("gram", 1.0),
+	GRAM("Gram", 1.0),
 	
 	/**
 	 * Kilogram unit.
 	 */
-	Kilogram("kilogram", 1000.0);
+	KILOGRAM("Kilogram", 1000.0);
 	
 	public final double value;
 	public final String name;
@@ -52,6 +52,6 @@ public enum Weight implements Unit {
 	 */
 	@Override
 	public String toString() {
-		return this.name();
+		return this.name;
 	}
 }

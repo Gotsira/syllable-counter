@@ -50,8 +50,8 @@ public class ConverterUI extends JFrame {
 		equals.setHorizontalAlignment(JTextField.CENTER);
 		input = new JTextField(5);
 		output = new JTextField(5);
-		inputBox = new JComboBox();
-		outputBox = new JComboBox();
+		inputBox = new JComboBox<Unit>();
+		outputBox = new JComboBox<Unit>();
 		convert = new JButton("Convert!");
 		clear = new JButton("Clear");
 		df = new DecimalFormat("0.000");
@@ -59,7 +59,10 @@ public class ConverterUI extends JFrame {
 		for (UnitType utype : UnitType.class.getEnumConstants()) {
 			JMenuItem menuItem = new JMenuItem(utype.name());
 			menuItem.addActionListener(new ActionListener() {
-
+				
+				/**
+				 * Action to perform when an option in the menu bar is selected.
+				 */
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					inputBox.removeAllItems();
@@ -69,7 +72,9 @@ public class ConverterUI extends JFrame {
 					Unit[] units = converter.getUnits(utype);
 					for (Unit name : units) {
 						inputBox.addItem(name);
+						inputBox.setToolTipText(name.toString());
 						outputBox.addItem(name);
+						outputBox.setToolTipText(name.toString());
 					}
 				}
 			});
@@ -91,6 +96,9 @@ public class ConverterUI extends JFrame {
 
 		convert.addActionListener(new ActionListener() {
 
+			/**
+			 * Action to perform when the convert button is pressed.
+			 */
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Unit in = (Unit) inputBox.getSelectedItem();
@@ -103,6 +111,7 @@ public class ConverterUI extends JFrame {
 					output.setText(result);
 					input.setForeground(Color.BLACK);
 				} catch (RuntimeException e2) {
+					output.setForeground(Color.BLACK);
 					input.setForeground(Color.RED);
 				}
 				if (input.getText().equals("") && !output.getText().equals("")) {
@@ -123,7 +132,10 @@ public class ConverterUI extends JFrame {
 		});
 
 		clear.addActionListener(new ActionListener() {
-
+			
+			/**
+			 * Action to perform when the clear button is pressed.
+			 */
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				input.setText("");

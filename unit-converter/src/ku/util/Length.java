@@ -10,22 +10,22 @@ public enum Length implements Unit{
 	/**
 	 * Foot unit.
 	 */
-	Foot("foot", 0.3048),
+	FOOT("Foot", 0.3048),
 	
 	/**
 	 * Inch unit.
 	 */
-	Inch("inch", 0.0254),
+	INCH("Inch", 0.0254),
 	
 	/**
 	 * Meter unit.
 	 */
-	Meter("meter", 1.0),
+	METER("meter", 1.0),
 	
 	/**
 	 * Kilometer unit.
 	 */
-	Kilometer("kilometer", 1000.0);
+	KILOMETER("kilometer", 1000.0);
 	
 	public final double value;
 	public final String name;
@@ -58,6 +58,6 @@ public enum Length implements Unit{
 	 */
 	@Override
 	public String toString() {
-		return this.name();
+		return this.name;
 	}
 }

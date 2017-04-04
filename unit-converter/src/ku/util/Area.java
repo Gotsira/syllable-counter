@@ -4,22 +4,22 @@ public enum Area implements Unit {
 	/**
 	 * Square foot unit.
 	 */
-	Squarefoot("Square foot", 0.092903),
+	SQUAREFOOT("Square foot", 0.092903),
 	
 	/**
 	 * Square inch unit.
 	 */
-	Squareinch("Square inch", 0.00064516),
+	SQUAREINCH("Square inch", 0.00064516),
 	
 	/**
 	 * Square meter unit.
 	 */
-	Squaremeter("Square meter", 1.0),
+	SQUAREMETER("Square meter", 1.0),
 	
 	/**
 	 * Square kilometer unit.
 	 */
-	Squarekilometer("Square kilometer", 1E6);
+	SQUAREKILOMETER("Square kilometer", 1E6);
 	
 	public final double value;
 	public final String name;
@@ -53,7 +53,7 @@ public enum Area implements Unit {
 	 */
 	@Override
 	public String toString() {
-		return this.name();
+		return this.name;
 	}
 
 }

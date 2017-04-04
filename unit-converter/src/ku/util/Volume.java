@@ -2,16 +2,22 @@ package ku.util;
 
 public enum Volume implements Unit {
 	/**
-	 * 
+	 * Liter unit.
 	 */
-	Liter("liter", 0.001),
+	LITER("Liter", 0.001),
 	
 	/**
-	 * 
+	 * Milliliter unit.
 	 */
-	Milliliter("milliliter", 1E-6),
-	Cublicfoot("cubic foot", 0.0283168),
-	Cublicmeter("cubic meter", 1.0);
+	MILLILITER("Milliliter", 1E-6),
+	/**
+	 * Cubic foot unit.
+	 */
+	CUBICFOOT("Cubic foot", 0.0283168),
+	/**
+	 * Cubic meter unit.
+	 */
+	CUBICMETER("Cubic meter", 1.0);
 	
 	public final double value;
 	public final String name;
@@ -44,6 +50,6 @@ public enum Volume implements Unit {
 	 */
 	@Override
 	public String toString() {
-		return this.name();
+		return this.name;
 	}
 }
