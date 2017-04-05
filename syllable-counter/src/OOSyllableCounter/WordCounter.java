@@ -1,4 +1,4 @@
-package keep;
+package OOSyllableCounter;
 
 public class WordCounter {
 	private final State START = new StartState();

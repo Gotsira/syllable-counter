@@ -1,4 +1,4 @@
-package keep;
+package OOSyllableCounter;
 
 import java.io.*;
 import java.net.*;

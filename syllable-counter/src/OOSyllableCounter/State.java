@@ -1,4 +1,4 @@
-package keep;
+package OOSyllableCounter;
 
 public abstract class State {
 	public abstract void handleChar(char c);
