@@ -1,4 +1,4 @@
 # syllable-counter
-Time: 0.25439
-Syllables: 103676
-Words: 38762
+Time: 0.25439 <br /> 
+Syllables: 103676 <br /> 
+Words: 38762 <br /> 
